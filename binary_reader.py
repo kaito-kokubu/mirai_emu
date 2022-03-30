@@ -5,7 +5,7 @@ import datetime
 
 def dfs(dir):
     if os.path.isfile(dir):
-        print(dir)
+        #print(dir)
         read_binary(dir)
         #print('\n')
     else:
