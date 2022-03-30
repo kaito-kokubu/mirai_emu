@@ -7,7 +7,7 @@ def dfs(dir):
     if os.path.isfile(dir):
         print(dir)
         read_binary(dir)
-        print('\n')
+        #print('\n')
     else:
         dir_list = os.listdir(dir)
         next_dir_list = [os.path.join(dir, f) for f in dir_list]
