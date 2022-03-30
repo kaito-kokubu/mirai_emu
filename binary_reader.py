@@ -1,4 +1,6 @@
+from distutils import errors
 import os
+import datetime
 
 
 def dfs(dir):
@@ -14,9 +16,9 @@ def dfs(dir):
 
         
 def read_binary(file):
-    with open(file) as f:
+    with open(file, encoding='utf8', errors='ignore') as f:
         data = f.read()
-        print(data)
+        #print(data)
 def main():
     init_dir = os.path.expanduser('~')
     os.chdir(init_dir)
@@ -27,4 +29,6 @@ def main():
 
 
 if __name__ == '__main__':
+    print(f"exec time: {datetime.datetime.now()}")
     main()
+    print(f"exec time: {datetime.datetime.now()}")
