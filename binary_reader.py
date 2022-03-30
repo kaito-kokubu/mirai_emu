@@ -29,6 +29,6 @@ def main():
 
 
 if __name__ == '__main__':
-    print(f"exec time: {datetime.datetime.now()}")
+    print(f"binary read start time: {datetime.datetime.now()}")
     main()
-    print(f"exec time: {datetime.datetime.now()}")
+    print(f"binary read finish time: {datetime.datetime.now()}")
