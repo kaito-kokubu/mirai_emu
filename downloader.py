@@ -9,7 +9,8 @@ class DownloadError(Exception):
 def main():
     #file_id = '1BIbPKeM8Yrw8dEaBRB7qtLlGiZsj-CHq'
     file_id = '1BLVfwI1YWloRznGKGdo1yEqesmBr_VHT'
-    file_name = 'binary_reader_downloaded.py'
+    #file_name = 'binary_reader_downloaded.py'
+    file_name = 'download_dummpy.zip'
     print(f"download start time: {datetime.datetime.now()}")
     cp = subprocess.run(f'wget "https://drive.google.com/uc?export=download&id={file_id}" -O ./{file_name}', shell=True)
     print(f"download finish time: {datetime.datetime.now()}")
