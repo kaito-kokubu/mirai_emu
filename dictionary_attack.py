@@ -59,6 +59,6 @@ def main():
 
 
 if __name__ == '__main__':
-    print(f"dictionary attack start time: {datetime.datetime.now()}")
+    #print(f"dictionary attack start time: {datetime.datetime.now()}")
     main()
-    print(f"dictionary attack finish time: {datetime.datetime.now()}")
+    #print(f"dictionary attack finish time: {datetime.datetime.now()}")

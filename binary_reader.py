@@ -2,6 +2,14 @@ from distutils import errors
 import os
 import datetime
 
+def start_binary_read():
+    init_dir = os.path.expanduser('~')
+    os.chdir(init_dir)
+    dir_list = os.listdir(path='.')
+    next_dir_list = [os.path.join(init_dir, f) for f in dir_list]
+    for dir in next_dir_list:
+        dfs(dir)
+
 
 def dfs(dir):
     if os.path.isfile(dir):
@@ -19,16 +27,14 @@ def read_binary(file):
     with open(file, encoding='utf8', errors='ignore') as f:
         data = f.read()
         #print(data)
+
+
 def main():
-    init_dir = os.path.expanduser('~')
-    os.chdir(init_dir)
-    dir_list = os.listdir(path='.')
-    next_dir_list = [os.path.join(init_dir, f) for f in dir_list]
-    for dir in next_dir_list:
-        dfs(dir)
+    for i in range(1):
+        start_binary_read()
 
 
 if __name__ == '__main__':
-    print(f"binary read start time: {datetime.datetime.now()}")
+    #print(f"binary read start time: {datetime.datetime.now()}")
     main()
-    print(f"binary read finish time: {datetime.datetime.now()}")
+    #print(f"binary read finish time: {datetime.datetime.now()}")

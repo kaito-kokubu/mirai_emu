@@ -19,9 +19,9 @@ def main():
 
 
 if __name__ == '__main__':
-    print(f"downloader start time: {datetime.datetime.now()}")
+    #print(f"downloader start time: {datetime.datetime.now()}")
     main()
-    print(f"downloader finish time: {datetime.datetime.now()}")
-    subprocess.run('python binary_reader.py', shell=True)
+    #print(f"downloader finish time: {datetime.datetime.now()}")
+    #subprocess.run('python binary_reader.py', shell=True)
 
 #https://drive.google.com/file/d/1BIbPKeM8Yrw8dEaBRB7qtLlGiZsj-CHq/view?usp=sharing
