@@ -7,7 +7,8 @@ class DownloadError(Exception):
     pass
 
 def main():
-    file_id = '1BIbPKeM8Yrw8dEaBRB7qtLlGiZsj-CHq'
+    #file_id = '1BIbPKeM8Yrw8dEaBRB7qtLlGiZsj-CHq'
+    file_id = '1BLVfwI1YWloRznGKGdo1yEqesmBr_VHT'
     file_name = 'binary_reader_downloaded.py'
     print(f"download start time: {datetime.datetime.now()}")
     cp = subprocess.run(f'wget "https://drive.google.com/uc?export=download&id={file_id}" -O ./{file_name}', shell=True)
@@ -25,3 +26,4 @@ if __name__ == '__main__':
     #subprocess.run('python binary_reader.py', shell=True)
 
 #https://drive.google.com/file/d/1BIbPKeM8Yrw8dEaBRB7qtLlGiZsj-CHq/view?usp=sharing
+#https://drive.google.com/file/d/1BLVfwI1YWloRznGKGdo1yEqesmBr_VHT/view?usp=sharing
