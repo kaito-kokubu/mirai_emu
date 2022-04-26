@@ -1,5 +1,5 @@
 import telnetlib
-from xmlrpc.client import Fault
+#from xmlrpc.client import Fault
 import paramiko
 from paramiko import SSHException, BadHostKeyException, AuthenticationException
 import datetime
@@ -43,7 +43,7 @@ def ssh_login(ip, id, password):
                        username=id,
                        password=password,
                        timeout=10.0)
-    except (SSHException, BadHostKeyException, AuthenticationException, socket.error):
+    except (SSHException, BadHostKeyException, AuthenticationException):
         print('cannot connect to the host')
         return False
     print('successfully connected')
