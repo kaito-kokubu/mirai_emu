@@ -52,14 +52,15 @@ def ssh_login(ip, id, password):
 
 def main():
     result = []
-    for ip in target_ip_address:
-        for id in id_list:
-            for password in pass_list:
-                if telnet_login(ip, id, password):
-                    result.append(['telnet', ip, id, password])
-                else:
-                    if ssh_login(ip, id, password):
-                        result.append(['ssh', ip, id, password])
+    for i in range(30):
+        for ip in target_ip_address:
+            for id in id_list:
+                for password in pass_list:
+                    if telnet_login(ip, id, password):
+                        result.append(['telnet', ip, id, password])
+                    else:
+                        if ssh_login(ip, id, password):
+                            result.append(['ssh', ip, id, password])
     return result
 
 
