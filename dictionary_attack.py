@@ -1,7 +1,8 @@
 import telnetlib
 #from xmlrpc.client import Fault
 import paramiko
-from paramiko import SSHException, BadHostKeyException, AuthenticationException, NoValidConnectionsError
+from paramiko import SSHException, BadHostKeyException, AuthenticationException
+from paramiko.ssh_exception import NoValidConnectionsError
 import datetime
 
 target_ip_address = ['157.82.207.245']
