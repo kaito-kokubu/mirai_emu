@@ -52,7 +52,7 @@ def ssh_login(ip, id, password):
 
 def main():
     result = []
-    for i in range(30):
+    for i in range(5):
         for ip in target_ip_address:
             for id in id_list:
                 for password in pass_list:
