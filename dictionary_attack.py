@@ -21,15 +21,15 @@ def telnet_login(ip, id, password):
         print('connection refused...')
         return False
     try:
-        tn.read_until("login: ", timeout=10.0)
-        tn.write(id + "\n")
+        tn.read_until(b"login: ", timeout=10.0)
+        tn.write(f"{id}\n".encode('utf-8'))
         print('user name trying')
     except EOFError:
         print('wrong id')
         return False
     try:
-        tn.read_until("Password: ", timeout=10.0)
-        tn.write(password + "\n")
+        tn.read_until(b"Password: ", timeout=10.0)
+        tn.write(f"{password}\n".encode('utf-8'))
         print('password trying')
     except EOFError:
         print('wrong password')
