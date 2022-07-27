@@ -56,6 +56,7 @@ def main():
         for ip in target_ip_address:
             for id in id_list:
                 for password in pass_list:
+                    print('trying telnet connect')
                     if telnet_login(ip, id, password):
                         result.append(['telnet', ip, id, password])
     return result
