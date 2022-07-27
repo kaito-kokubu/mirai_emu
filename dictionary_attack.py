@@ -18,7 +18,7 @@ def telnet_login(ip, id, password):
         print('cannot connect to the ip address')
         return False
     except ConnectionRefusedError:
-        #print('connection refused...')
+        print('connection refused...')
         return False
     try:
         tn.read_until("login: ", timeout=10.0)
