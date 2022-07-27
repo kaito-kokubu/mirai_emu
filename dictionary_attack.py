@@ -13,7 +13,7 @@ pass_list = ['qwerty', '123456789', 'password', 'password123',
 
 def telnet_login(ip, id, password):
     try:
-        tn = telnetlib.Telnet(ip)
+        tn = telnetlib.Telnet(ip, 23)
     except EOFError:
         print('cannot connect to the ip address')
         return False
