@@ -23,12 +23,14 @@ def telnet_login(ip, id, password):
     try:
         tn.read_until("login: ", timeout=10.0)
         tn.write(id + "\n")
+        print('user name trying')
     except EOFError:
         print('wrong id')
         return False
     try:
         tn.read_until("Password: ", timeout=10.0)
         tn.write(password + "\n")
+        print('password trying')
     except EOFError:
         print('wrong password')
         return False
@@ -52,11 +54,11 @@ def ssh_login(ip, id, password):
 
 def main():
     result = []
-    for i in range(5):
+    for i in range(20):
         for ip in target_ip_address:
             for id in id_list:
                 for password in pass_list:
-                    print('trying telnet connect')
+                    #print('trying telnet connect')
                     if telnet_login(ip, id, password):
                         result.append(['telnet', ip, id, password])
     return result
