@@ -58,11 +58,6 @@ def main():
                 for password in pass_list:
                     if telnet_login(ip, id, password):
                         result.append(['telnet', ip, id, password])
-'''
-                    else:
-                        if ssh_login(ip, id, password):
-                            result.append(['ssh', ip, id, password])
-'''
     return result
 
 
@@ -70,3 +65,10 @@ if __name__ == '__main__':
     #print(f"dictionary attack start time: {datetime.datetime.now()}")
     main()
     #print(f"dictionary attack finish time: {datetime.datetime.now()}")
+
+
+'''
+                    else:
+                        if ssh_login(ip, id, password):
+                            result.append(['ssh', ip, id, password])
+'''
