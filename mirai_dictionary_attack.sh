@@ -6,5 +6,5 @@ python dictionary_attack.py
 
 end_time=`date "+%Y-%m-%d %H:%M:%S.%6N"`
 
-echo $start_time
-echo $end_time
+echo start,$start_time >> ./dictionary_log.csv
+echo end,$end_time >> ./dictionary_log.csv
